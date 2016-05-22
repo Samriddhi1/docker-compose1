@@ -1,0 +1,13 @@
+jenkins:
+  build: ./jenkins
+  ports:
+    - "8080:8080"
+  links:
+    - sonar:sonar
+
+sonar:
+  build: ./sonar
+  ports:
+   - "9000:9000"
+   - "5432:5432"
+  
